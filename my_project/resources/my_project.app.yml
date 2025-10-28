@@ -1,7 +1,7 @@
 resources:
   apps:
     hello_world_app:
-      name: hello_world_app
+      name: hello-world-app
       description: "Hello World FastAPI + React application deployed on Databricks"
       source_code_path: ../src
       config:
