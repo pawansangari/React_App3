@@ -3,14 +3,11 @@ resources:
     hello_world_app:
       name: hello_world_app
       description: "Hello World FastAPI + React application deployed on Databricks"
-      
-      resources:
-        - name: "main-job-compute"
-          description: "Compute resource for running the FastAPI app"
-          sql_warehouse_id: "{{ workspace.sql_warehouse_id }}"
-      
+      source_code_path: ../src
       config:
         command:
+          - "python"
+          - "-m"
           - "uvicorn"
           - "my_project.main:app"
           - "--host"
